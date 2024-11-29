@@ -48,7 +48,7 @@ def generate_post(topic):
     response_post = openai.ChatCompletion.create(
         model="gpt-4",
         messages=[{"role": "user", "content": prompt_post}],
-        max_tokens=1000,
+        max_tokens=200,
         temperature=0.7,
     )
     post_content = response_post.choices[0].message.content.strip()
